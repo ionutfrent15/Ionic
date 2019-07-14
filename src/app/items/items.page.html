@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>I T E M S</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="items">
+    <ion-item *ngFor="let it of items" (click)="showItemDetails(it)">
+      {{it.text}}
+    </ion-item>
+  </ion-list>
+  <!--<ion-virtual-scroll [items]="items" [headerFn]="myHeaderFn">-->
+    <!--<ion-item *virtualItem="let item">-->
+      <!--{{ item.text }}-->
+    <!--</ion-item>-->
+  <!--</ion-virtual-scroll>-->
+</ion-content>

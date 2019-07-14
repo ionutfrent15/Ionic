@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>U P D A T E &nbsp; I T E M</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="item">
+  <ion-item>
+    <ion-label position="fixed">text</ion-label>
+    <ion-input [(ngModel)]="item.text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="fixed">active</ion-label>
+    <ion-input [(ngModel)]="item.isActive"></ion-input>
+  </ion-item>
+  <!--<ion-item>-->
+    <!--<ion-label>Active</ion-label>-->
+    <!--<ion-checkbox></ion-checkbox>-->
+  <!--</ion-item>-->
+  <ion-button (click)="updateItem()">SAVE</ion-button>
+</ion-content>
